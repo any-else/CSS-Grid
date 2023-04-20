@@ -1,0 +1,88 @@
+.container {
+  background-image: linear-gradient(to right bottom, #ffa400, #e74c3c);
+  display: grid;
+  padding: 50px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 100px 100px 50px;
+  grid-auto-flow: row;
+  grid-auto-rows: 100px;
+  grid-row-gap: 40px;
+  margin-bottom: 100px;
+}
+.item {
+  color: black;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 3px solid orange;
+}
+
+.parent {
+  display: grid;
+  height: 200px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 200px;
+  margin-bottom: 100px;
+}
+.item1 {
+  background-color: #e74c3c;
+}
+
+.item2 {
+  background-color: #ffa400;
+}
+.item3 {
+  background-color: aqua;
+}
+
+.parent2 {
+  display: grid;
+  height: 500px;
+  grid-template-columns: 200px;
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.item11 {
+  background-color: #e74c3c;
+}
+
+.item22 {
+  background-color: #ffa400;
+}
+
+.item33 {
+  background-color: aquamarine;
+}
+
+#page {
+  display: grid;
+  width: 100%;
+  height: 250px;
+  grid-template-areas: "head  head "
+                        "nav main"
+                        "nav foot";
+  grid-template-rows: 50px 1fr 60px;  
+  grid-template-columns: 150px 1fr;                
+}
+#page > header {
+  grid-area: head;
+  background-color: #e74c3c;
+}
+
+#page > nav {
+  background-color: #ffa400;
+  grid-area: nav;
+}
+
+#page > main {
+  background-color: blueviolet;
+  grid-area: main;
+}
+
+#page > footer {
+  background-color: darkblue;
+  grid-area: foot;
+}
